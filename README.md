@@ -31,15 +31,11 @@ allowing visitors to explore how atmospheric electrical phenomena form, behave a
 
 ### Atlas Overview
 
-![Atlas Overview](assets/screenshots/home.png)
+![Atlas Overview](assets/Images/home.png)
 
-### Interactive Visualization
+![Interactive Visualization](assets/Images/spider-lightning.png)
 
-![Interactive Visualization](assets/screenshots/spider-lightning.png)
-
-### Scientific Details
-
-![Scientific Details](assets/screenshots/phenomenon-details.png)
+![Scientific Details](assets/Images/assetsscreenshotsphenomenon-details.png)
 
 ---
 
