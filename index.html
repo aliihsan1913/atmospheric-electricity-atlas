@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atmospheric Electricity Atlas</title>
+  <meta name="description" content="An interactive index of every atmospheric electrical discharge, from lightning to gigantic jets — each with its own physics simulation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="site-header__eyebrow" id="progress-readout">loading…</p>
+      <h1 class="site-header__title">Atmospheric Electricity Atlas</h1>
+      <p class="site-header__subtitle">
+        An index of every electrical discharge in the sky, from the troposphere
+        to the ionosphere. Every entry comes with its own physics simulation.
+      </p>
+      <svg class="signal-line" viewBox="0 0 600 24" preserveAspectRatio="none" aria-hidden="true">
+        <polyline points="0,12 220,12 232,3 244,21 256,12 600,12"
+          fill="none" stroke="#eaf4ff" stroke-width="1.2" opacity="0.55" />
+      </svg>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="index-list" id="index-root"></div>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

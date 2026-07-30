@@ -1,0 +1,514 @@
+{
+  "categories": [
+    { "id": "ground",   "name": "Ground-Attaching Discharges" },
+    { "id": "incloud",  "name": "In-Cloud and Cloud-to-Cloud Discharges" },
+    { "id": "conditional", "name": "Environmentally Conditioned Discharges" },
+    { "id": "rare",     "name": "Rare and Anomalous Phenomena" },
+    { "id": "tle",      "name": "Transient Luminous Events (TLE)" },
+    { "id": "highenergy", "name": "High-Energy Events" },
+    { "id": "fundamentals", "name": "Fundamental Electrodynamics" }
+  ],
+
+  "phenomena": [
+    {
+      "id": "cg-negative", "code": "CG−", "category": "ground",
+      "name_tr": "Negative Cloud-to-Ground Lightning", "name_en": "Downward Negative Cloud-to-Ground Discharge (CG⁻)",
+      "altitude_km": [0, 6],
+      "summary": "The standard ground flash: a negative stepped leader descends from the cloud base and joins an upward positive connecting leader from the ground. Roughly 90% of all ground flashes.",
+      "what_it_is": "The standard, most common form of ground lightning, accounting for roughly 90% of all ground flashes.",
+      "how_it_forms": "Starting from the cloud's main negative charge layer (between -10°C and -25°C), a negative stepped leader descends toward the ground in discrete 30–50 m steps. When the leader tip comes within 30–100 m of the ground, the field strength at conductive structures exceeds the air breakdown threshold and one or more upward positive connecting leaders shoot up. When the two leaders meet, a return stroke surges upward at up to a third of the speed of light, heating the channel above 30,000 K. Subsequent dart leaders along the same channel can produce additional return strokes.",
+      "where_it_occurs": "0–6 km AGL; the channel spans from the ground to the cloud base. Vertical channel length is 5–10 km, core plasma channel diameter is 1–2 cm.",
+      "electrical": { "voltage": "10⁷ – 10⁸ V", "current": "30 – 50 kA (median)", "energy": "10⁹ – 10¹⁰ J", "duration": "200 – 500 ms (total flash, single stroke 100 µs)", "temperature": "> 30,000 K" },
+      "fun_facts": [
+        "The visible light travels UP, not down — the faint leader descends, but the bright return stroke races from ground to cloud.",
+        "Benjamin Franklin proved lightning's electrical nature in 1752; Schonland resolved the stepped-leader mechanism with dual-lens streak cameras in the 1930s.",
+        "A major source of tropospheric NOx and the primary discharge mechanism of the global electric circuit."
+      ],
+      "sources": [
+        { "label": "Rakov & Uman, Lightning: Physics and Effects (2003)" },
+        { "label": "Dwyer & Uman, The Physics of Lightning, Physics Reports (2014)" }
+      ],
+      "status": "done"
+    },
+    {
+      "id": "cg-positive", "code": "CG+", "category": "ground",
+      "name_tr": "Positive Cloud-to-Ground Lightning", "name_en": "Downward Positive Cloud-to-Ground Discharge (CG⁺)",
+      "altitude_km": [0, 10],
+      "summary": "Descends from a storm's upper positive charge region; a single stroke followed by a long continuing current delivers far more energy to the ground than negative CG.",
+      "what_it_is": "Only 5–10% of ground flashes, but with much greater energetic consequences than its negative counterpart.",
+      "how_it_forms": "Originates in the upper positive anvil or mature convective core of severe storms, mesoscale convective systems, or winter snowstorms. The positive leader descends continuously rather than in steps and branches far less. On meeting an upward negative connecting leader, a powerful return stroke fires, typically followed by a long continuing current lasting tens to hundreds of milliseconds — making positive lightning the leading trigger for wildfires and structural damage.",
+      "where_it_occurs": "0–10+ km AGL; occurs where tilted charge structures in severe storms or stratiform anvil decks expose the upper positive region directly to the ground.",
+      "electrical": { "voltage": "10⁸ – 10⁹ V", "current": "100 – 300 kA (occasionally 500+ kA)", "energy": "> 10¹⁰ J", "duration": "100 ms – 1 s+ (long continuing current)", "temperature": "" },
+      "fun_facts": [
+        "Not just 'a stronger negative bolt' — positive leaders follow fundamentally different, continuous breakdown physics.",
+        "The large charge-moment changes it produces drive the quasi-electrostatic fields that trigger Red Sprites in the mesosphere."
+      ],
+      "sources": [
+        { "label": "Berger et al., Swiss mountain-tower current measurements (1960s–70s)" },
+        { "label": "Williams, The Tripole Structure of Thunderstorms, JGR (1989)" }
+      ],
+      "status": "done"
+    },
+    {
+      "id": "staccato", "code": "STC", "category": "ground",
+      "name_tr": "Staccato Lightning", "name_en": "Single-Stroke Ground Discharge",
+      "altitude_km": [0, 6],
+      "summary": "A single, brief, highly energetic stroke with no following dart leader — so it doesn't flicker.",
+      "what_it_is": "A cloud-to-ground flash with no subsequent dart leader or continuing current. Appears as one instantaneous, heavily branched burst of light.",
+      "how_it_forms": "The rapid discharge of an isolated cloud charge pocket; the channel deionizes quickly, preventing later dart leaders from forming.",
+      "where_it_occurs": "0–6 km AGL, channel length 3–8 km.",
+      "electrical": { "voltage": "", "current": "30 – 100 kA", "energy": "", "duration": "< 1 – 10 ms", "temperature": "" },
+      "fun_facts": ["All ground flashes are assumed to flicker; staccato lightning is visually instantaneous instead."],
+      "sources": [{ "label": "Uman & Rakov, streak-camera channel dynamics studies" }],
+      "status": "done"
+    },
+    {
+      "id": "ribbon", "code": "RIB", "category": "ground",
+      "name_tr": "Ribbon Lightning", "name_en": "Wind-Displaced Multi-Stroke Discharge",
+      "altitude_km": [0, 5],
+      "summary": "Strong crosswinds shift the ionized channel sideways between successive strokes, producing what looks like parallel ribbons of light.",
+      "what_it_is": "A multi-stroke ground flash where crosswinds perpendicular to the observer's line of sight displace the channel between strokes.",
+      "how_it_forms": "Successive dart leaders reuse the same ionized channel, but between strokes (20–100 ms apart) the ambient wind blows the plasma column several meters sideways.",
+      "where_it_occurs": "0–5 km AGL.",
+      "electrical": { "voltage": "", "current": "~30 kA per stroke (standard CG−)", "energy": "", "duration": "200 – 600 ms (total flash)", "temperature": "" },
+      "fun_facts": ["Often mistaken for several simultaneous strikes; it's actually a single channel re-fired repeatedly while it drifts.", "Photographed and documented as early as the late 19th century by Lord Rayleigh."],
+      "sources": [{ "label": "Lord Rayleigh, atmospheric optics observations (19th c.)" }],
+      "status": "done"
+    },
+    {
+      "id": "bead", "code": "BEAD", "category": "ground",
+      "name_tr": "Bead Lightning", "name_en": "Pinch-Effect Segmented Lightning",
+      "altitude_km": [0, 4],
+      "summary": "A rare decay pattern in which a cooling lightning channel breaks apart into a persistent string of glowing beads.",
+      "what_it_is": "Seen during the decay phase of a stroke (French 'éclair en chapelet'); the cooling plasma channel visually fragments into bright dots that outlast the surrounding channel.",
+      "how_it_forms": "Hydrodynamic instabilities (m=0 pinch instabilities) in the decaying plasma column, or local variations in channel geometry.",
+      "where_it_occurs": "0–4 km AGL, bead segment diameter 0.5–5 m.",
+      "electrical": { "voltage": "", "current": "100 – 1000 A (decay tail)", "energy": "", "duration": "50 – 500 ms (bead persistence phase)", "temperature": "" },
+      "fun_facts": ["Often confused with ball lightning, but different: bead lightning is a fragmented decay of a linear channel, while ball lightning is an independent plasmoid."],
+      "sources": [{ "label": "Arago (1838); Uman, theoretical model (1964)" }],
+      "status": "done"
+    },
+    {
+      "id": "bolt-from-blue", "code": "BFB", "category": "ground",
+      "name_tr": "Bolt from the Blue", "name_en": "Positive Anvil-to-Ground Lightning",
+      "altitude_km": [0, 10],
+      "summary": "A positive ground strike that travels laterally through clear air for kilometers before striking the ground, appearing to a bystander to come from clear sky.",
+      "what_it_is": "An energetic positive ground flash that strikes 5–25 km from the parent storm, entirely under clear sky.",
+      "how_it_forms": "Strong updrafts near the storm core drive a positive leader vertically up toward the anvil; it exits into clear air, drifts laterally for kilometers, then turns 90° downward and strikes the ground.",
+      "where_it_occurs": "0–10 km AGL; horizontal distance from the storm 5–25 km, total channel 15–40 km.",
+      "electrical": { "voltage": "", "current": "40 – 150 kA", "energy": "10⁹ – 10¹⁰ J", "duration": "200 – 600 ms", "temperature": "" },
+      "fun_facts": ["Appears to strike from a cloudless sky, but there is always a parent storm within 10–25 km — an unseen storm doesn't mean it's safe."],
+      "sources": [{ "label": "Krehbiel et al., lightning-location network studies (1990s)" }],
+      "status": "done"
+    },
+    {
+      "id": "superbolt", "code": "SB", "category": "ground",
+      "name_tr": "Superbolt", "name_en": "Extreme-Power Lightning Stroke",
+      "altitude_km": [0, 8],
+      "summary": "Strokes with 100–1000× the optical and radio energy of a median flash, concentrated mostly over oceanic winter storms.",
+      "what_it_is": "First detected by Turman (1977) via satellite optical sensors: strokes with peak optical power exceeding 10¹¹ W or total stroke energy above 10⁶ J.",
+      "how_it_forms": "Charge buildup over broad oceanic winter storms and low charge-layer heights enable exceptionally high peak currents (300–500+ kA).",
+      "where_it_occurs": "0–8 km AGL; geographically concentrated over oceans (North Atlantic, Mediterranean, near Japan), mostly in winter, at low latitudes along the geomagnetic equator.",
+      "electrical": { "voltage": "", "current": "> 100 – 500+ kA", "energy": "> 10⁶ J (VLF radiation)", "duration": "10 – 500 ms", "temperature": "" },
+      "fun_facts": ["Carries extreme VLF whistler-mode wave energy into the magnetosphere, scattering radiation-belt particles.", "Not randomly distributed as often assumed — strictly concentrated in oceanic/winter-storm regions."],
+      "sources": [
+        { "label": "Turman, Detection of Lightning Superbolts, JGR (1977)" },
+        { "label": "Holzworth et al., Global Distribution of Superbolts, JGR (2019)" },
+        { "label": "Ripoll et al., Nature Communications (2021)" }
+      ],
+      "status": "done"
+    },
+    {
+      "id": "intracloud", "code": "IC", "category": "incloud",
+      "name_tr": "Intracloud Lightning", "name_en": "Intracloud Discharge (IC)",
+      "altitude_km": [3, 12],
+      "summary": "Occurs between opposite charge regions within a single storm cloud — the most common discharge type, 70–80% of all lightning.",
+      "what_it_is": "The dominant form of electrical breakdown in thunderstorms, occurring between the main negative charge layer and the upper positive layer; never reaches the ground.",
+      "how_it_forms": "A bidirectional leader propagates simultaneously upward and downward through internal charge pockets. Light scatters through cloud droplets, producing a diffuse, flickering glow across the storm ('sheet lightning').",
+      "where_it_occurs": "3–12 km AGL, horizontal/vertical channel length 5–20 km.",
+      "electrical": { "voltage": "10⁷ – 10⁸ V", "current": "10 – 30 kA", "energy": "", "duration": "100 – 500 ms", "temperature": "" },
+      "fun_facts": ["Sudden increases in IC flash rate ('lightning jumps') correlate directly with convective intensification and are used as a severe-weather precursor."],
+      "sources": [{ "label": "Pierce & Brook, RF network characterization (mid-20th c.); modern VHF Lightning Mapping Array studies" }],
+      "status": "done"
+    },
+    {
+      "id": "intercloud", "code": "CC", "category": "incloud",
+      "name_tr": "Intercloud Lightning", "name_en": "Intercloud Discharge (CC)",
+      "altitude_km": [3, 10],
+      "summary": "A long, horizontal discharge that spans the clear-air gap between two separate cloud systems.",
+      "what_it_is": "Occurs when the field gradient between charge centers in separate clouds exceeds the dielectric breakdown strength of the intervening air.",
+      "how_it_forms": "Triggered by differential charge buildup between adjacent severe convective cells, or between a convective core and an adjacent anvil/stratiform deck.",
+      "where_it_occurs": "3–10 km AGL; exposed clear-air channel spans from 10 km to 50+ km.",
+      "electrical": { "voltage": "", "current": "20 – 50 kA", "energy": "~10⁹ J", "duration": "200 – 800 ms", "temperature": "" },
+      "fun_facts": ["Assumed harmless because it never touches the ground — but it's a serious hazard to commercial aviation."],
+      "sources": [{ "label": "Early meteorological catalogs; 1990s VHF array network studies" }],
+      "status": "done"
+    },
+    {
+      "id": "cloud-to-air", "code": "CA", "category": "incloud",
+      "name_tr": "Cloud-to-Air Lightning", "name_en": "Cloud-to-Air Discharge (CA)",
+      "altitude_km": [3, 11],
+      "summary": "Exits a cloud charge region into surrounding clear air and self-terminates without ever reaching the ground or another cloud.",
+      "what_it_is": "A stepped leader exits a localized cloud charge center directly into uncharged clear air.",
+      "how_it_forms": "Intense charge accumulation near a cloud margin, with no strong ground path or neighboring cloud target, causes the leader to self-terminate in clear air.",
+      "where_it_occurs": "3–11 km AGL, channel length 2–10 km.",
+      "electrical": { "voltage": "10⁷ V", "current": "10 – 30 kA", "energy": "~10⁸ J", "duration": "100 – 300 ms", "temperature": "" },
+      "fun_facts": ["Looks like a 'failed' ground stroke, but is actually a self-limiting discharge governed by local space-charge dynamics."],
+      "sources": [{ "label": "Mid-20th-century storm electrification research" }],
+      "status": "done"
+    },
+    {
+      "id": "spider", "code": "SPD", "category": "incloud",
+      "name_tr": "Spider Lightning", "name_en": "Stratiform Horizontal Discharge",
+      "altitude_km": [4, 9],
+      "summary": "Web-like horizontal discharges that can crawl over 100 km along the base of a mesoscale convective system's anvil.",
+      "what_it_is": "Long, sprawling, web-like horizontal discharges spreading across the cloud base or anvil shield, often associated with positive ground flashes.",
+      "how_it_forms": "Advection and buildup of charged ice particles over large stratiform precipitation regions of a mesoscale convective system (MCS) creates broad horizontal charge layers.",
+      "where_it_occurs": "4–9 km AGL; horizontal extent from 50 km to 700+ km ('megaflashes').",
+      "electrical": { "voltage": "", "current": "20 – 100 kA (peak stroke)", "energy": "> 100 C charge transfer", "duration": "1 – 3 s", "temperature": "" },
+      "fun_facts": ["Some 'megaflashes' exceed 700 km of horizontal extent (GOES Lightning Mapper satellite measurements).", "Its slow movement suggests low energy, but it can trigger energetic positive ground strikes far from the convective core."],
+      "sources": [{ "label": "Ligda, radar observations (1956)" }, { "label": "GOES Lightning Mapper global studies" }],
+      "status": "done"
+    },
+    {
+      "id": "anvil-crawler", "code": "ANV", "category": "incloud",
+      "name_tr": "Anvil Crawler", "name_en": "Anvil Stratiform Discharge",
+      "altitude_km": [8, 15],
+      "summary": "Slow-moving, tree-like discharges that sweep across a mature storm's high-altitude anvil shield.",
+      "what_it_is": "Horizontally expansive discharges that sweep across high-altitude anvil shields, slow enough to be tracked visually.",
+      "how_it_forms": "Extended upper-level charge layers built by convective transport of ice crystals accumulate potential gradients across the anvil; often follows positive ground flashes.",
+      "where_it_occurs": "8–15 km AGL; horizontal extent 30–200+ km.",
+      "electrical": { "voltage": "", "current": "hundreds of A – a few kA", "energy": "10 – 80 C charge transfer", "duration": "1 – 2.5 s", "temperature": "" },
+      "fun_facts": ["Mistaken for harmless sheet lightning, but connected to large-scale charge shifts within the storm."],
+      "sources": [{ "label": "High-speed video campaigns, sprite field research programs (1990s–2000s)" }],
+      "status": "done"
+    },
+    {
+      "id": "rocket", "code": "ROCK", "category": "incloud",
+      "name_tr": "Rocket Lightning", "name_en": "Slow-Propagating Luminescent Leader",
+      "altitude_km": [3, 10],
+      "summary": "A leader whose luminous tip drifts slowly enough across the sky to resemble a launching rocket.",
+      "what_it_is": "A leader propagating far slower than average (~10⁴ m/s); its glowing tip can be tracked with the naked eye along cloud boundaries.",
+      "how_it_forms": "The leader travels through low-field or space-charge-neutralized regions, advancing at the minimum breakdown field threshold.",
+      "where_it_occurs": "3–10 km AGL, length 5–20 km.",
+      "electrical": { "voltage": "", "current": "100 – 500 A (continuous leader)", "energy": "", "duration": "500 ms – 2 s", "temperature": "" },
+      "fun_facts": ["Sometimes misidentified as a man-made flare or projectile — it's a natural electrical leader."],
+      "sources": [{ "label": "High-speed photography studies, leader physics literature" }],
+      "status": "done"
+    },
+    {
+      "id": "forked", "code": "FORK", "category": "incloud",
+      "name_tr": "Forked Lightning", "name_en": "Branched Cloud-to-Ground Lightning",
+      "altitude_km": [0, 6],
+      "summary": "The visual name for standard cloud-to-ground lightning's visibly branching path as it descends.",
+      "what_it_is": "The visual representation of cloud-to-ground lightning as the descending leader branches into multiple downward paths.",
+      "how_it_forms": "Breakdown follows paths shaped by local humidity and air-density gradients; usually only one or two branches complete a full ground connection, the rest drain into the main channel.",
+      "where_it_occurs": "0–6 km AGL, main channel 5–10 km, branch spread 1–5 km.",
+      "electrical": { "voltage": "", "current": "~30 kA (median, standard CG−)", "energy": "", "duration": "200 – 500 ms", "temperature": "" },
+      "fun_facts": ["Every branch is assumed to reach the ground, but typically only one or two branches complete the connection."],
+      "sources": [{ "label": "Foundational lightning physics textbooks" }],
+      "status": "done"
+    },
+    {
+      "id": "heat", "code": "HEAT", "category": "incloud",
+      "name_tr": "Heat Lightning (Myth)", "name_en": "Distant Illumination",
+      "altitude_km": [0, 15],
+      "summary": "Silent light on a warm night from a storm too far away for its thunder to be heard — not a separate phenomenon at all.",
+      "what_it_is": "Not a distinct discharge class — it's the optical reflection of ordinary lightning (IC or CG) occurring 20+ km away.",
+      "how_it_forms": "Light from a distant flash scatters off high clouds and aerosol layers, while the acoustic shockwave (thunder) refracts upward through thermal gradients or attenuates before reaching the observer.",
+      "where_it_occurs": "Optical scattering at 0–15 km; observation distance 20–150 km from the parent storm.",
+      "electrical": { "voltage": "", "current": "", "energy": "Same as the parent flash", "duration": "100 – 500 ms (flash pulses)", "temperature": "" },
+      "note": "Not a separate discharge type — it's the optical reflection of ordinary lightning 20+ km away; the thunder is inaudible at that distance.",
+      "fun_facts": ["Folklore once held that hot summer air itself generated the flashes; in reality there's always a real storm underneath."],
+      "sources": [{ "label": "Meteorological optics and acoustics literature" }],
+      "status": "done"
+    },
+    {
+      "id": "dry", "code": "DRY", "category": "conditional",
+      "name_tr": "Dry Lightning", "name_en": "High-Cloud-Base Evaporative Lightning",
+      "altitude_km": [0, 8],
+      "summary": "Lightning from storms whose rain evaporates before reaching the ground — a leading cause of wildfires.",
+      "what_it_is": "Standard lightning occurring in environments with high cloud bases and a dry sub-cloud boundary layer (e.g. the western US, interior Australia).",
+      "how_it_forms": "The storm produces standard CG and IC discharges, but falling precipitation evaporates as virga in mid-air. When a ground strike occurs, there's no surface rain to extinguish anything it ignites.",
+      "where_it_occurs": "Cloud base >3–5 km AGL; discharge spans 0–8 km AGL.",
+      "electrical": { "voltage": "", "current": "30 – 100 kA (often CG+ with long continuing current)", "energy": "", "duration": "200 – 500 ms", "temperature": "" },
+      "fun_facts": ["Sometimes assumed to be a unique physical discharge type; it's actually standard lightning occurring in a dry atmospheric profile."],
+      "sources": [{ "label": "Fire-weather and wildfire-forecasting literature" }],
+      "status": "done"
+    },
+    {
+      "id": "thundersnow", "code": "TSN", "category": "conditional",
+      "name_tr": "Thundersnow", "name_en": "Winter Convective Snowstorm Discharge",
+      "altitude_km": [0, 4],
+      "summary": "A rare winter-storm lightning event accompanied by snowfall instead of rain.",
+      "what_it_is": "Lightning discharges occurring during intense winter snowfall events.",
+      "how_it_forms": "Triggered by lake-effect convection or extratropical cyclones, non-inductive collisions between graupel and snow crystals in low-altitude, high-shear winter updrafts separate charge.",
+      "where_it_occurs": "0–4 km AGL (low cloud bases).",
+      "electrical": { "voltage": "", "current": "30 – 150 kA (higher proportion of CG+)", "energy": "", "duration": "200 – 800 ms, often with a long continuing current", "temperature": "" },
+      "fun_facts": ["It's often assumed cold temperatures prevent snowstorms from producing lightning; cold updrafts readily charge ice crystals.", "Falling snow attenuates sound, so thunder is usually only audible within 3–5 km."],
+      "sources": [{ "label": "Severe winter storms research literature" }],
+      "status": "done"
+    },
+    {
+      "id": "volcanic", "code": "VOLC", "category": "conditional",
+      "name_tr": "Volcanic Lightning", "name_en": "Volcanic Plume Discharge",
+      "altitude_km": [0, 20],
+      "summary": "Discharges within an erupting volcano's ash plume, driven by triboelectric charging and particle fracturing — the 'dirty thunderstorm'.",
+      "what_it_is": "Electrical discharges within an explosive volcanic eruption column, ranging from micro-sparks near the vent to kilometer-scale bolts in the upper ash cloud.",
+      "how_it_forms": "Two mechanisms: (1) near-vent fracto-emission and triboelectric charging as ash particles collide and fracture; (2) ice-phase charging higher up as ejected water vapor freezes in the upper plume.",
+      "where_it_occurs": "Vent level to 20 km AGL.",
+      "electrical": { "voltage": "", "current": "1 – 50 kA", "energy": "", "duration": "ms per stroke", "temperature": "" },
+      "fun_facts": ["Pliny the Younger described this phenomenon during the eruption of Vesuvius in 79 AD.", "Tracked with high-resolution RF arrays during the 2010 Eyjafjallajökull and 2022 Hunga Tonga eruptions."],
+      "sources": [{ "label": "Volcanology and atmospheric electricity research journals" }],
+      "status": "done"
+    },
+    {
+      "id": "ball-lightning", "code": "BALL", "category": "rare",
+      "name_tr": "Ball Lightning", "name_en": "Autonomous Spherical Plasmoid",
+      "altitude_km": [0, 0.1],
+      "summary": "A rare, free-floating, glowing sphere associated with thunderstorms — its mechanism is still not fully resolved.",
+      "what_it_is": "Documented for centuries: glowing spheres, typically 10–50 cm across, drifting horizontally at walking speed (~1–2 m/s) for 1–20 seconds, independent of convective airflow. Reported both outdoors and inside enclosed structures (sometimes passing through window glass without breaking it).",
+      "how_it_forms": "Competing theories: (1) Vaporized Silicon Hypothesis (Abrahamson & Dinniss) — soil silica reduced by a lightning strike into pure silicon nanoparticles that burn slowly by oxidation; (2) Microwave Cavity Models (Kapitsa, Zheng) — microwave radiation from relativistic electrons trapped inside a plasma bubble; (3) ion collection on insulating glass surfaces sustaining internal microsecond pulsed discharges (Fassbinder et al.).",
+      "where_it_occurs": "Ground level – lower troposphere (0–100 m AGL; including aircraft cockpits and buildings).",
+      "electrical": { "voltage": "", "current": "", "energy": "10⁴ – 10⁵ J (estimated, ~10–100 W optical power)", "duration": "1 – 20 s", "temperature": "" },
+      "note": "The mechanism is still disputed — vaporized silicon, microwave cavity, and ion-collection theories all compete. Don't present any of them as the settled explanation.",
+      "fun_facts": ["In 2012, Cen et al. recorded high-speed video and the optical spectrum of a natural ball-lightning event in China; the spectrum showed silicon, iron, and calcium emission lines — the main constituents of soil.", "Reportedly observed by Tsar Nicholas II and Nikola Tesla (1899)."],
+      "sources": [
+        { "label": "Cen et al., Physical Review Letters (2014)" },
+        { "label": "Abrahamson & Dinniss, Nature (2000)" },
+        { "label": "Stephan et al., Journal of Atmospheric and Solar-Terrestrial Physics (2016)" }
+      ],
+      "status": "done"
+    },
+    {
+      "id": "st-elmos-fire", "code": "ELMO", "category": "rare",
+      "name_tr": "St. Elmo's Fire", "name_en": "Point Corona Discharge",
+      "altitude_km": [0, 10],
+      "summary": "A continuous blue-violet corona glow at sharp, grounded conductive points — not a flame, a cold plasma discharge.",
+      "what_it_is": "A persistent corona discharge that occurs when the ambient field beneath a thunderstorm reaches 100–300 kV/m.",
+      "how_it_forms": "Sharp grounded objects — aircraft wingtips, radio towers, ship masts, mountain peaks — concentrate local field lines, ionizing the surrounding nitrogen and oxygen and producing a glowing, brush-like plasma with an audible hiss or buzz.",
+      "where_it_occurs": "Ground level – 10+ km AGL (aircraft operating altitudes).",
+      "electrical": { "voltage": "> 1 MV/m local field at the tip", "current": "10⁻⁶ – 10⁻³ A", "energy": "", "duration": "Minutes to hours, as long as the external field exceeds the threshold", "temperature": "" },
+      "fun_facts": ["Often mistaken for a form of ball lightning or an actual fire; it's a cold plasma corona discharge.", "Named after St. Erasmus of Formia (St. Elmo); documented for centuries by Mediterranean sailors.", "Studied scientifically by Michael Faraday and Lord Kelvin."],
+      "sources": [{ "label": "Foundational electrodynamics treatises; aviation safety reports" }],
+      "status": "done"
+    },
+    {
+      "id": "red-sprite", "code": "RS", "category": "tle",
+      "name_tr": "Red Sprite", "name_en": "Mesospheric Streamer Discharge",
+      "altitude_km": [40, 90],
+      "summary": "Large-scale discharges at 40–90 km, triggered right after a strong positive ground flash — a red canopy with fine blue tendrils reaching downward.",
+      "what_it_is": "High-altitude electrical discharges triggered by the quasi-electrostatic (QE) field pulse that follows an energetic positive cloud-to-ground (CG+) flash.",
+      "how_it_forms": "Begins at 70–80 km as downward-propagating ionization fronts (streamers) accelerating to ~10⁷ m/s. The upper structure shows a diffuse red glow (nitrogen's First Positive System, N₂ 1PG), while the lower structure becomes fine blue filamentary tendrils reaching down to ~40 km.",
+      "where_it_occurs": "40–90 km (peak optical brightness at 60–80 km); vertical extent 40–50 km, horizontal width 10–50 km.",
+      "electrical": { "voltage": "", "current": "charge-moment change > 500–2000 C·km", "energy": "~22 MJ per event", "duration": "5 – 100 ms", "temperature": "" },
+      "subtypes": ["Carrot Sprite — a fully developed morphology with a bulbous top and long trailing blue tendrils", "Column Sprite — thin, unbranched vertical columns at 70–80 km, usually clustered"],
+      "fun_facts": ["Predicted theoretically by C.T.R. Wilson in 1925; first visually documented by Franz et al. (1989).", "Alters middle-atmosphere chemistry, producing NOx and HNO3 and affecting local ionospheric electron densities."],
+      "sources": [
+        { "label": "Pasko et al., Space Science Reviews (2012)" },
+        { "label": "Franz et al., first visual documentation (1989)" }
+      ],
+      "status": "done"
+    },
+    {
+      "id": "sprite-halo", "code": "HALO", "category": "tle",
+      "name_tr": "Sprite Halo", "name_en": "Diffuse Mesospheric Halo",
+      "altitude_km": [70, 85],
+      "summary": "A brief, smooth, disk-shaped red glow at ~70–85 km that often precedes a red sprite.",
+      "what_it_is": "A smooth, filament-free, flattened-disk glow at 70–85 km altitude, lasting 2–10 ms, that frequently precedes streamer-based red sprites.",
+      "how_it_forms": "Direct quasi-electrostatic field pulses from a fast CG+ charge transfer heat the lower ionosphere's free electrons above the breakdown threshold, before streamer-tip formation begins.",
+      "where_it_occurs": "70–85 km; horizontal diameter 50–100 km, thickness 2–10 km.",
+      "electrical": { "voltage": "", "current": "charge-moment threshold ~200–500 C·km (lower than a full sprite)", "energy": "~14 MJ per event", "duration": "1 – 10 ms", "temperature": "" },
+      "fun_facts": ["Sometimes confused with ELVES — but halos are QE-field-driven mesospheric glows, while ELVES are EMP-driven ionospheric glows."],
+      "sources": [{ "label": "Barrington-Leigh et al., high-speed video observations (late 1990s)" }],
+      "status": "done"
+    },
+    {
+      "id": "blue-jet", "code": "BJ", "category": "tle",
+      "name_tr": "Blue Jet", "name_en": "Stratospheric Cone Leader Discharge",
+      "altitude_km": [15, 50],
+      "summary": "A narrow cone of blue light shooting up from a storm's anvil, reaching up to ~50 km into the stratosphere.",
+      "what_it_is": "Fan-shaped upward discharges originating at the top of an active convective cloud (15–18 km) and propagating into the stratosphere at ~100 km/s.",
+      "how_it_forms": "An imbalance between the upper positive cloud layer and the overlying negative screening layer triggers an upward positive leader that breaks through the cloud top. Unlike sprites, it isn't triggered by ground lightning — it emerges independently from internal cloud charge imbalance.",
+      "where_it_occurs": "15–50 km AGL; cone half-angle 15°, total length 30–35 km.",
+      "electrical": { "voltage": "", "current": "100 – 1000 A", "energy": "", "duration": "200 – 300 ms", "temperature": "" },
+      "fun_facts": ["Observed from the Space Shuttle in 1989; documented over Panama by aircraft campaigns in 1994; monitored by ISS-ASIM.", "Injects charge and reactive species (NOx, O₃) directly into the stratospheric ozone layer."],
+      "sources": [
+        { "label": "Neubert et al., Nature (2021)" },
+        { "label": "Wescott et al., Panama aircraft campaigns (1994)" }
+      ],
+      "status": "done"
+    },
+    {
+      "id": "blue-starter", "code": "BS", "category": "tle",
+      "name_tr": "Blue Starter", "name_en": "Aborted Stratospheric Discharge",
+      "altitude_km": [15, 25],
+      "summary": "Rises from the cloud top like a blue jet but extinguishes below 25 km — a jet that never made it.",
+      "what_it_is": "An upward discharge that resembles a blue jet in origin but extinguishes lower in the atmosphere, appearing as a short blue plume from the cloud top.",
+      "how_it_forms": "Begins as an upward positive leader from the cloud top, but insufficient driving potential or charge imbalance causes it to quench early in the denser air below.",
+      "where_it_occurs": "15–25 km AGL, vertical length 2–8 km.",
+      "electrical": { "voltage": "", "current": "lower than a full blue jet", "energy": "", "duration": "20 – 100 ms", "temperature": "" },
+      "fun_facts": ["Sometimes treated as a separate discharge class; it's actually an aborted blue jet."],
+      "sources": [{ "label": "Wescott et al., 1994 aircraft research campaigns" }],
+      "status": "done"
+    },
+    {
+      "id": "gigantic-jet", "code": "GJ", "category": "tle",
+      "name_tr": "Gigantic Jet", "name_en": "Cloud-to-Ionosphere Discharge",
+      "altitude_km": [18, 90],
+      "summary": "The most monumental discharge in the atmosphere — a direct conductive path between a storm's cloud top and the lower ionosphere.",
+      "what_it_is": "High-altitude discharges providing a direct electrical connection between tropospheric thunderstorms and the ionosphere.",
+      "how_it_forms": "A bidirectional leader breaks out from the cloud top during extreme internal charge imbalance, without a preceding CG flash. It advances through the stratosphere (up to 40 km) as a blue-jet-like leader, then transitions into a multi-streamer burst reaching ionospheric heights (~90 km). Optical emission shifts from blue in the lower stratosphere to bright red in the mesosphere.",
+      "where_it_occurs": "18–90 km; vertical extent >70 km, top fan width 40–50 km.",
+      "electrical": { "voltage": "~100 MV (potential drop)", "current": "kA-level (peak)", "energy": "", "duration": "100 – 500 ms", "temperature": "" },
+      "fun_facts": ["Sometimes mistaken for a giant sprite — but a gigantic jet is a continuous upward-propagating leader, while a sprite is a downward-initiated mesospheric breakdown event.", "Discovered by Pasko et al. (2002) over Puerto Rico and Su et al. (2003) over Taiwan; mapped globally by the ISUAL satellite."],
+      "sources": [
+        { "label": "Pasko, Plasma Physics and Controlled Fusion (2008)" },
+        { "label": "Su et al., Taiwan observations (2003)" }
+      ],
+      "status": "done"
+    },
+    {
+      "id": "elves", "code": "ELV", "category": "tle",
+      "name_tr": "ELVES", "name_en": "EMP-Induced Ionospheric Emission",
+      "altitude_km": [85, 105],
+      "summary": "An expanding ring of light at the base of the ionosphere, lasting less than a millisecond, produced by a lightning stroke's electromagnetic pulse.",
+      "what_it_is": "The most common TLE type (~80% of all TLE occurrences); appears as an expanding luminous ring or disk at 85–105 km, with a horizontal diameter that can exceed 300–500 km.",
+      "how_it_forms": "A high-peak-current lightning stroke (CG− or CG+) emits a spherical electromagnetic pulse (EMP) that propagates into the lower ionosphere, accelerating free electrons and exciting nitrogen molecules (N₂ 1PG). Because the EMP wavefront's geometric intersection with the ionospheric boundary expands, the apparent expansion speed exceeds the speed of light.",
+      "where_it_occurs": "85–105 km; horizontal diameter 300–500 km, thickness 5–10 km.",
+      "electrical": { "voltage": "", "current": "> 60 – 100 kA (triggering stroke)", "energy": "~19 MJ per event", "duration": "< 1 ms (typically 100–300 µs)", "temperature": "" },
+      "fun_facts": ["Deposits ~1370 MJ/minute globally into the lower ionosphere and produces transient ionization density increases (10%+).", "Mistaken for a slow glowing cloud; it's actually a sub-millisecond emission governed by wavefront geometry."],
+      "sources": [
+        { "label": "Inan et al., Space Science Reviews (2010)" },
+        { "label": "Fukunishi et al., Geophysical Research Letters (1996)" }
+      ],
+      "status": "done"
+    },
+    {
+      "id": "troll", "code": "TRL", "category": "tle",
+      "name_tr": "Troll", "name_en": "Transient Red Optical Luminous Lineament",
+      "altitude_km": [40, 60],
+      "summary": "A secondary red streak that forms as a decaying red-sprite tendril reignites.",
+      "what_it_is": "A short-tailed red spot forming in the wake of a strong red sprite, as the decaying tendril channel reignites.",
+      "how_it_forms": "Governed by trailing charge along the decaying sprite streamer channel.",
+      "where_it_occurs": "40–60 km.",
+      "electrical": { "voltage": "", "current": "", "energy": "", "duration": "10 – 100 ms", "temperature": "" },
+      "fun_facts": ["Sometimes treated as an independent primary TLE family; it's actually a localized secondary optical extension of a sprite."],
+      "sources": [{ "label": "Lyons et al. (2000)" }],
+      "status": "done"
+    },
+    {
+      "id": "pixie-gnome", "code": "PIX", "category": "tle",
+      "name_tr": "Pixie / Gnome", "name_en": "Secondary Cloud-Top TLEs",
+      "altitude_km": [15, 20],
+      "summary": "Very brief, small flashes of light at cloud tops with no associated lightning.",
+      "what_it_is": "Pixie: a fast white flash at a cloud top, <100 m wide, lasting ~16 ms, with no associated lightning. Gnome: a brief (few ms) upward-pointing spike of light directly above a convective updraft tower.",
+      "how_it_forms": "Localized micro-breakdowns within turbulent convective updraft tops.",
+      "where_it_occurs": "15–20 km.",
+      "electrical": { "voltage": "", "current": "", "energy": "Low energy, localized field spikes", "duration": "< 5 – 20 ms", "temperature": "" },
+      "fun_facts": ["Pixies were first observed during the STEPS field campaign (2000)."],
+      "sources": [{ "label": "STEPS field project reports" }],
+      "status": "done"
+    },
+    {
+      "id": "tgf", "code": "TGF", "category": "highenergy",
+      "name_tr": "Terrestrial Gamma-ray Flash", "name_en": "Terrestrial Gamma-Ray Flash (TGF)",
+      "altitude_km": [10, 15],
+      "summary": "A sub-millisecond burst of high-energy gamma radiation emitted upward into space by a thunderstorm's electric field.",
+      "what_it_is": "Millisecond bursts of gamma-ray photons up to tens of MeV, originating at 10–15 km inside thunderstorms. Discovered via BATSE, Fermi, AGILE, and ASIM.",
+      "how_it_forms": "A thunderstorm's electric field accelerates electrons to relativistic speeds (Relativistic Runaway Electron Avalanche — RREA, aided by relativistic feedback); these electrons collide with air nuclei, emitting bremsstrahlung gamma rays.",
+      "where_it_occurs": "10–15 km (source region inside cloud tops); source region 1–2 km, gamma-ray cone expands into space over hundreds of km.",
+      "electrical": { "voltage": "", "current": "", "energy": "20 – 40 MeV photons", "duration": "0.1 – 1 ms", "temperature": "" },
+      "fun_facts": ["Discovered by Fishman et al. (1994) using NASA's Compton Gamma Ray Observatory.", "Shows that a thunderstorm's electric field behaves like a natural particle accelerator, even producing antimatter."],
+      "sources": [
+        { "label": "Fishman et al., Science (1994)" },
+        { "label": "Dwyer & Uman, Physics Reports (2014)" }
+      ],
+      "status": "done"
+    },
+    {
+      "id": "teb", "code": "TEB", "category": "highenergy",
+      "name_tr": "Terrestrial Electron Beam", "name_en": "Magnetospherically Trapped Terrestrial Electron Beam",
+      "altitude_km": [30, 100],
+      "summary": "Beams of relativistic electrons and positrons launched by a TGF that become trapped along Earth's magnetic field lines.",
+      "what_it_is": "When a TGF occurs, high-energy gamma rays undergo pair production (γ → e⁻ + e⁺) on colliding with atmospheric nuclei; the resulting relativistic electrons and positrons escape the atmosphere and are captured by Earth's geomagnetic field.",
+      "how_it_forms": "Pair production and Compton scattering from high-altitude TGF gamma rays produce energetic charged particles directed along the geomagnetic field vector.",
+      "where_it_occurs": "30 km to thousands of km into the magnetosphere.",
+      "electrical": { "voltage": "", "current": "", "energy": "1 – 30 MeV particles", "duration": "ms – s (as beams bounce between magnetic mirror points)", "temperature": "" },
+      "fun_facts": ["Detected by the Fermi Gamma-ray Space Telescope (2009) while passing through electron/positron beams from a distant storm.", "Storm electrical effects were assumed to be confined to the atmosphere; TEBs carry energetic particles directly into the magnetosphere instead."],
+      "sources": [{ "label": "Fermi satellite discoveries, Geophysical Research Letters" }],
+      "status": "done"
+    },
+    {
+      "id": "gec", "code": "GEC", "category": "fundamentals",
+      "name_tr": "Global Electric Circuit", "name_en": "Global Atmospheric Electric Circuit (GEC)",
+      "altitude_km": [0, 100],
+      "summary": "The planet-wide circuit in which storms charge the ionosphere while fair-weather return currents keep it balanced.",
+      "what_it_is": "The system maintaining Earth's electrodynamic balance: continuous global storm activity acts as a battery, pumping positive charge into the conductive ionosphere (~250–500 kV relative to the ground).",
+      "how_it_forms": "Global storm and convective activity (~2000 active storms at any moment) drives vertical currents into the ionosphere; the resulting potential difference drives a downward fair-weather conduction current back through the weakly conductive atmosphere to the surface.",
+      "where_it_occurs": "Earth's surface to the ionosphere (~80–100 km).",
+      "electrical": { "voltage": "~250 – 500 kV (total potential difference)", "current": "1000 – 2000 A (total global current)", "energy": "", "duration": "Continuous, planetary-scale system", "temperature": "" },
+      "fun_facts": ["Fair-weather electricity and storm electricity are often assumed to be separate; they're actually components of one closed global circuit.", "Formulated by C.T.R. Wilson in the 1920s; confirmed by the Carnegie research vessel's daily potential-variation measurements (the Carnegie Curve)."],
+      "sources": [{ "label": "Rycroft et al., Journal of Atmospheric and Solar-Terrestrial Physics (2000)" }],
+      "status": "done"
+    },
+    {
+      "id": "fair-weather-field", "code": "FWF", "category": "fundamentals",
+      "name_tr": "Fair-Weather Electric Field", "name_en": "Quasistatic Fair-Weather Electric Field",
+      "altitude_km": [0, 20],
+      "summary": "The persistent downward electric field between the ionosphere and the ground, present everywhere far from storms.",
+      "what_it_is": "In regions far from storms ('fair weather'), a persistent downward field exists between the positively charged ionosphere and the negatively charged ground.",
+      "how_it_forms": "Sustained by the Earth surface's net negative charge (~-500 kC) and the ionosphere's net positive charge (maintained by global storm activity); drives a small downward conduction current carried by ions from cosmic rays and radon decay.",
+      "where_it_occurs": "0–20 km (decays exponentially with altitude as atmospheric conductivity increases).",
+      "electrical": { "voltage": "100 – 150 V/m (at sea level)", "current": "1 – 3 pA/m²", "energy": "", "duration": "Continuous (fluctuates daily per the Carnegie curve)", "temperature": "" },
+      "fun_facts": ["It's often assumed the Earth's surface carries no net charge; it actually holds about 500,000 coulombs of net negative charge."],
+      "sources": [{ "label": "Royal Meteorological Society journals; Lemonnier (1752), Lord Kelvin (1860s) measurements" }],
+      "status": "done"
+    },
+    {
+      "id": "corona", "code": "COR", "category": "fundamentals",
+      "name_tr": "Corona Discharge", "name_en": "Partial Dielectric Atmospheric Breakdown",
+      "altitude_km": [0, 15],
+      "summary": "A localized discharge where a strong field ionizes air around a sharp electrode without reaching full breakdown.",
+      "what_it_is": "Occurs when the local field around a sharp conductive point (a tip, plant, or wire) exceeds the air breakdown threshold (~3 MV/m at STP) while the average field across the gap stays below it.",
+      "how_it_forms": "Free electrons near the high-field point accelerate and produce avalanche ionization; the ionized nitrogen and oxygen emit UV and blue light during radiative recombination.",
+      "where_it_occurs": "Ground level – upper cloud boundary (0–15 km).",
+      "electrical": { "voltage": "> 3 MV/m (local field)", "current": "~10⁻⁶ A", "energy": "", "duration": "Continuous, or microsecond pulses (Trichel pulses)", "temperature": "" },
+      "fun_facts": ["Sometimes confused with a full spark breakdown; corona is a self-limiting partial discharge that never bridges the electrodes."],
+      "sources": [{ "label": "Townsend (1915); Peek (1929), gas discharge physics literature" }],
+      "status": "done"
+    },
+    {
+      "id": "triboelectric", "code": "TRIB", "category": "fundamentals",
+      "name_tr": "Triboelectric Charging", "name_en": "Non-Inductive Ice-Ice Collision Electrification",
+      "altitude_km": [4, 10],
+      "summary": "Charge transfer between colliding ice particles — the core engine of thunderstorm electrification.",
+      "what_it_is": "The primary mechanism of storm electrification: dense, fast-falling graupel colliding with rising ice crystals in the presence of supercooled water droplets.",
+      "how_it_forms": "In convective updrafts, charge exchanges across liquid-like surface layers during collisions. Below the charge-reversal temperature (roughly -10°C to -15°C), graupel gains net negative charge while rising ice crystals gain net positive charge, building macroscale cloud charge layers.",
+      "where_it_occurs": "4–10 km AGL (temperature regime 0°C to -40°C).",
+      "electrical": { "voltage": "", "current": "10⁻¹⁴ – 10⁻¹² C per collision", "energy": "Macroscale cloud fields exceed 100 kV/m", "duration": "Microsecond collisions; macro charging over 10–30 minutes", "temperature": "" },
+      "fun_facts": ["Simple mechanical friction is sometimes assumed to charge clouds; real charge transfer requires mass transfer across liquid surface layers under thermodynamic constraints."],
+      "sources": [
+        { "label": "Reynolds et al. (1957)" },
+        { "label": "Takahashi (1978); Saunders et al. (1990s)" }
+      ],
+      "status": "done"
+    },
+    {
+      "id": "schumann", "code": "SCH", "category": "fundamentals",
+      "name_tr": "Schumann Resonances", "name_en": "Extremely Low Frequency Earth-Ionosphere Cavity Resonances",
+      "altitude_km": [0, 90],
+      "summary": "A set of resonance peaks in the extremely-low-frequency band, excited by global lightning activity in the Earth-ionosphere cavity.",
+      "what_it_is": "The Earth's surface and the conductive lower ionosphere form a spherical, concentric cavity waveguide. Radiation from global lightning flashes (~40–50 per second worldwide) circulates within this waveguide.",
+      "how_it_forms": "Constructive interference produces standing electromagnetic waves at frequencies set by the Earth's radius. The fundamental mode sits at ~7.83 Hz, with discrete harmonics at 14.3, 20.8, 27.3, and 33.8 Hz.",
+      "where_it_occurs": "Earth's surface (0 km) – lower ionosphere (~60–90 km).",
+      "electrical": { "voltage": "mV/m-scale electric field", "current": "pT-scale magnetic field amplitude", "energy": "", "duration": "Continuous global background field", "temperature": "" },
+      "fun_facts": ["The fundamental resonance frequency of ~7.83 Hz comes directly from the geometry of the Earth-ionosphere cavity.", "Sometimes linked to human biological rhythms or health claims; it's actually a natural, low-amplitude planetary electromagnetic wave mode."],
+      "sources": [
+        { "label": "Schumann, Zeitschrift für Naturforschung A (1952)" },
+        { "label": "Schumann & König, experimental measurement (1954)" }
+      ],
+      "status": "done"
+    }
+  ]
+}
